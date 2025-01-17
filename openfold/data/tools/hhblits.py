@@ -20,7 +20,7 @@ import os
 import subprocess
 from typing import Any, Mapping, Optional, Sequence
 
-from openfold.data.tools import utils
+import utils
 
 
 _HHBLITS_DEFAULT_P = 20

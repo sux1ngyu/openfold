@@ -20,9 +20,9 @@ from typing import Optional, List
 import torch
 import torch.nn as nn
 
-from openfold.model.primitives import Linear, LayerNorm, Attention
-from openfold.utils.chunk_utils import chunk_layer
-from openfold.utils.tensor_utils import (
+from .primitives import Linear, LayerNorm, Attention
+from ..utils.chunk_utils import chunk_layer
+from ..utils.tensor_utils import (
     permute_final_dims,
     flatten_final_dims,
 )

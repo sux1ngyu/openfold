@@ -19,9 +19,9 @@ from typing import Optional
 import torch
 import torch.nn as nn
 
-from openfold.model.primitives import Linear, LayerNorm
-from openfold.utils.chunk_utils import chunk_layer
-from openfold.utils.tensor_utils import add, permute_final_dims
+from .primitives import Linear, LayerNorm
+from ..utils.chunk_utils import chunk_layer
+from ..utils.tensor_utils import add, permute_final_dims
 
 
 class TriangleMultiplicativeUpdate(nn.Module):

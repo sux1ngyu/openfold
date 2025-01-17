@@ -25,11 +25,11 @@ from typing import Any, Dict, Mapping, Optional, Sequence, Tuple
 
 import numpy as np
 
-from openfold.data import parsers, mmcif_parsing
-from openfold.data.errors import Error
-from openfold.data.tools import kalign
-from openfold.data.tools.utils import to_date
-from openfold.np import residue_constants
+from . import parsers, mmcif_parsing
+from .errors import Error
+from .tools import kalign
+from .tools.utils import to_date
+from ..np import residue_constants
 
 
 class NoChainsError(Error):

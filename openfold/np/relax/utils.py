@@ -15,7 +15,7 @@
 
 """Utils for minimization."""
 import io
-from openfold.np import residue_constants
+from .. import residue_constants
 from Bio import PDB
 import numpy as np
 try:

@@ -20,7 +20,7 @@ from typing import Sequence
 
 from absl import logging
 
-from openfold.data.tools import utils
+import utils
 
 
 def _to_a3m(sequences: Sequence[str]) -> str:

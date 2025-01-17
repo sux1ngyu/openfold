@@ -17,32 +17,32 @@ from typing import Optional, Sequence, Tuple
 import torch
 import torch.nn as nn
 
-from openfold.model.dropout import (
+from .dropout import (
     DropoutRowwise,
     DropoutColumnwise,
 )
-from openfold.model.evoformer import (
+from .evoformer import (
     EvoformerBlock,
     EvoformerStack,
 )
-from openfold.model.outer_product_mean import OuterProductMean
-from openfold.model.msa import (
+from .outer_product_mean import OuterProductMean
+from .msa import (
     MSARowAttentionWithPairBias, 
     MSAColumnAttention,
     MSAColumnGlobalAttention,
 )
-from openfold.model.pair_transition import PairTransition
-from openfold.model.primitives import Attention, GlobalAttention
-from openfold.model.structure_module import (
+from .pair_transition import PairTransition
+from .primitives import Attention, GlobalAttention
+from .structure_module import (
     InvariantPointAttention,
     BackboneUpdate,
 )
-from openfold.model.template import TemplatePairStackBlock
-from openfold.model.triangular_attention import (
+from .template import TemplatePairStackBlock
+from .triangular_attention import (
     TriangleAttentionStartingNode,
     TriangleAttentionEndingNode,
 )
-from openfold.model.triangular_multiplicative_update import (
+from .triangular_multiplicative_update import (
     TriangleMultiplicationOutgoing,
     TriangleMultiplicationIncoming,
 )

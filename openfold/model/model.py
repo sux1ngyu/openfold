@@ -18,34 +18,34 @@ import weakref
 import torch
 import torch.nn as nn
 
-from openfold.model.embedders import (
+from .embedders import (
     InputEmbedder,
     RecyclingEmbedder,
     TemplateAngleEmbedder,
     TemplatePairEmbedder,
     ExtraMSAEmbedder,
 )
-from openfold.model.evoformer import EvoformerStack, ExtraMSAStack
-from openfold.model.heads import AuxiliaryHeads
-from openfold.model.structure_module import StructureModule
-from openfold.model.template import (
+from .evoformer import EvoformerStack, ExtraMSAStack
+from .heads import AuxiliaryHeads
+from .structure_module import StructureModule
+from .template import (
     TemplatePairStack,
     TemplatePointwiseAttention,
     embed_templates_average,
     embed_templates_offload,
 )
-import openfold.np.residue_constants as residue_constants
-from openfold.utils.feats import (
+from ..np import residue_constants
+from ..utils.feats import (
     pseudo_beta_fn,
     build_extra_msa_feat,
     build_template_angle_feat,
     build_template_pair_feat,
     atom14_to_atom37,
 )
-from openfold.utils.loss import (
+from ..utils.loss import (
     compute_plddt,
 )
-from openfold.utils.tensor_utils import (
+from ..utils.tensor_utils import (
     add,
     dict_multimap,
     tensor_tree_map,
